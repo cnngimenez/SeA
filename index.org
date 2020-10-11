@@ -1,0 +1,123 @@
+
+* SeA
+SeA are Ada libraries for the Semantic Web
+
+https://img.shields.io/badge/License-GPLv3-informational.png?logo=gnu https://img.shields.io/badge/Ada-2012-informational.png
+
+* Libraries and packages
+
+[[file:imgs/libraries.png]]
+See imgs/README.md for the Semantic Web stack image copyright.
+
+
+SeA are divided in the following packages:
+
+[[file:imgs/packages.png]]
+
+
+* Compiling 
+All SeA subpackage follows the usual procedure.
+
+The requirements are
+
+- the Ada GNAT compiler 
+- the GPRBuild tools
+- the [[https://forge.ada-ru.org/matreshka][Matreshka library]]
+- the [[https://github.com/stcarrez/ada-util/][ada-utils library]]
+
+The usual sequence may work for your environment:
+
+: make
+: make install
+
+The Makefile can be configure at the makefile.setup file. This file can be generated with the following command:
+
+: make setup
+
+** With GPRBuild
+
+Use the following commands to compile:
+
+: gprbuild -PSeA.gpr -p
+
+To install the library and binaries:
+
+: gprinstall -PSeA.gpr -p
+
+A install directory can be specified by the ~--prefix~ parameter:
+
+: gprinstall -PSeA.gpr --prefix=/home/USERNAME/Ada -p
+
+* Usage
+The API specification are available as ~*.ads~ files. 
+
+Librares can be used by importing the GPR file into your GPR. For instance, the SeA-turtle imports the SeA-common libraries on their ~turtle_lib.gpr~ with the following sentence:
+
+Main programs were created for debuging purposes. They usually are ~src/binaries/*.adb~ source files and they are specified inside the ~PROJECTNAME_binaries.gpr~ file at the ~Main~ variable.
+These programs are used to test and debug the libraries. They can be used as examples.
+
+* License
+This work is under the General Public License version 3.
+
+
+* Meta     :noexport:
+
+  # ----------------------------------------------------------------------
+  #+TITLE:  Semantic Ada
+  #+AUTHOR: Christian Gimenez
+  #+DATE:   10 oct 2020
+  #+EMAIL:
+  #+DESCRIPTION: 
+  #+KEYWORDS: 
+
+  #+STARTUP: inlineimages hidestars content hideblocks entitiespretty
+  #+STARTUP: indent fninline latexpreview
+
+  #+OPTIONS: H:3 num:t toc:t \n:nil @:t ::t |:t ^:{} -:t f:t *:t <:t
+  #+OPTIONS: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+  #+OPTIONS: tex:imagemagick
+
+  #+TODO: TODO(t!) CURRENT(c!) PAUSED(p!) | DONE(d!) CANCELED(C!@)
+
+  # -- Export
+  #+LANGUAGE: en
+  #+LINK_UP:   
+  #+LINK_HOME: 
+  #+EXPORT_SELECT_TAGS: export
+  #+EXPORT_EXCLUDE_TAGS: noexport
+
+  # -- HTML Export
+  #+INFOJS_OPT: view:info toc:t ftoc:t ltoc:t mouse:underline buttons:t path:libs/org-info.js
+  #+HTML_LINK_UP: index.html
+  #+HTML_LINK_HOME: index.html
+  #+XSLT:
+
+  # -- For ox-twbs or HTML Export
+  # #+HTML_HEAD: <link href="libs/bootstrap.min.css" rel="stylesheet">
+  # -- -- LaTeX-CSS
+  # #+HTML_HEAD: <link href="css/style-org.css" rel="stylesheet">
+
+  # #+HTML_HEAD: <script src="libs/jquery.min.js"></script> 
+  # #+HTML_HEAD: <script src="libs/bootstrap.min.js"></script>
+
+
+  # -- LaTeX Export
+  # #+LATEX_CLASS: article
+  # -- -- Tikz
+  # #+LATEX_HEADER: \usepackage{tikz}
+  # #+LATEX_HEADER: \usetikzlibrary{shapes.geometric}
+  # #+LATEX_HEADER: \usetikzlibrary{shapes.symbols}
+  # #+LATEX_HEADER: \usetikzlibrary{positioning}
+  # #+LATEX_HEADER: \usetikzlibrary{trees}
+
+  # #+LATEX_HEADER_EXTRA:
+
+  # Local Variables:
+  # org-hide-emphasis-markers: t
+  # org-use-sub-superscripts: "{}"
+  # fill-column: 80
+  # visual-line-fringe-indicators: t
+  # ispell-local-dictionary: "british"
+  # org-twbs-inline-image-rules: (("file" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\'") ("attachment" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\'") ("http" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\(\\?.*\\)?\\'") ("https" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\(\\?.*\\)?\\'"))
+  # org-html-inline-image-rules: (("file" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\'") ("attachment" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\'") ("http" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\(\\?.*\\)?\\'") ("https" . "\\.\\(jpeg\\|jpg\\|png\\|gif\\|svg\\)\\(\\?.*\\)?\\'"))
+  # End:
