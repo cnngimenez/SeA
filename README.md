@@ -1,15 +1,15 @@
 
 # Table of Contents
 
-1.  [SeA](#org284f875)
-2.  [Libraries and packages](#orgc498390)
-3.  [Compiling](#org2b8f872)
-    1.  [With GPRBuild](#orgeca7a91)
-4.  [Usage](#orgb9e0bad)
-5.  [License](#orgcd79205)
+1.  [SeA](#org599f359)
+2.  [Libraries and packages](#orge703731)
+3.  [Compiling](#org5d9932f)
+    1.  [With GPRBuild](#orgf412815)
+4.  [Usage](#orgd0b7fd9)
+5.  [License](#org42cdc92)
 
 
-<a id="org284f875"></a>
+<a id="org599f359"></a>
 
 # SeA
 
@@ -18,9 +18,13 @@ SeA are Ada libraries for the Semantic Web
 ![img](https://img.shields.io/badge/License-GPLv3-informational.png?logo=gnu) ![img](https://img.shields.io/badge/Ada-2012-informational.png)
 
 
-<a id="orgc498390"></a>
+<a id="orge703731"></a>
 
 # Libraries and packages
+
+-   [SeA\_common](https://github.com/cnngimenez/SeA-common)
+-   [SeA\_turtle](https://github.com/cnngimenez/SeA-turtle)
+-   [Sea\_redstore](https://github.com/cnngimenez/SeA-redstore)
 
 ![img](imgs/libraries.png)
 See imgs/README.md for the Semantic Web stack image copyright.
@@ -30,7 +34,7 @@ SeA are divided in the following packages:
 ![img](imgs/packages.png)
 
 
-<a id="org2b8f872"></a>
+<a id="org5d9932f"></a>
 
 # Compiling
 
@@ -53,7 +57,7 @@ The Makefile can be configure at the makefile.setup file. This file can be gener
     make setup
 
 
-<a id="orgeca7a91"></a>
+<a id="orgf412815"></a>
 
 ## With GPRBuild
 
@@ -70,7 +74,7 @@ A install directory can be specified by the `--prefix` parameter:
     gprinstall -PSeA.gpr --prefix=/home/USERNAME/Ada -p
 
 
-<a id="orgb9e0bad"></a>
+<a id="orgd0b7fd9"></a>
 
 # Usage
 
@@ -82,7 +86,7 @@ Main programs were created for debuging purposes. They usually are `src/binaries
 These programs are used to test and debug the libraries. They can be used as examples.
 
 
-<a id="orgcd79205"></a>
+<a id="org42cdc92"></a>
 
 # License
 

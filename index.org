@@ -6,6 +6,10 @@ https://img.shields.io/badge/License-GPLv3-informational.png?logo=gnu https://im
 
 * Libraries and packages
 
+- [[https://github.com/cnngimenez/SeA-common][SeA_common]]
+- [[https://github.com/cnngimenez/SeA-turtle][SeA_turtle]]
+- [[https://github.com/cnngimenez/SeA-redstore][Sea_redstore]]
+
 [[file:imgs/libraries.png]]
 See imgs/README.md for the Semantic Web stack image copyright.
 
